@@ -1,11 +1,14 @@
 const express = require('express')
-const morgan = require('morgan')
 const cors = require('cors')
-const router = require('./router')
+
+const morgan = require('morgan')
+require('./model/MongoDB')
+
+const router = require('./router/index.js')
 const handleError = require('./middleware/handleError')
 
-const app = express()
 
+const app = express()
 app.use(morgan('dev'))
 app.use(express.json())
 app.use(cors())

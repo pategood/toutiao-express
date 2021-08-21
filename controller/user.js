@@ -2,6 +2,7 @@
 exports.userInfo = async (req, res, next) => {
   try {
     // 处理请求
+    console.log(req.body)
     res.send('get 注册')
   } catch (e) {
     next(e)
@@ -20,6 +21,7 @@ exports.login = async (req, res, next) => {
 exports.register = async (req, res, next) => {
   try {
     // 处理请求
+    console.log(req.body)
     res.send('get 注册')
   } catch (e) {
     next(e)
@@ -30,6 +32,25 @@ exports.update = async (req, res, next) => {
   try {
     // 处理请求
     res.send('put /updateUser')
+  } catch (e) {
+    next(e)
+  }
+}
+// 关注用户
+exports.follow = async (req, res, next) => {
+  try {
+    // 处理请求
+    res.send('post 关注用户')
+  } catch (e) {
+    next(e)
+  }
+}
+
+// 取消关注用户
+exports.undoFollow = async (req, res, next) => {
+  try {
+    // 处理请求
+    res.send('post 关注用户')
   } catch (e) {
     next(e)
   }

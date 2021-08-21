@@ -16,8 +16,17 @@ exports.articleInfo = async (req, res, next) => {
     next(e)
   }
 }
-// 获取文章信息
-exports.articleCollections = async (req, res, next) => {
+// 收藏文章
+exports.collections = async (req, res, next) => {
+  try {
+    // 处理请求
+    res.send('post 请求 收藏文章  必传id')
+  } catch (e) {
+    next(e)
+  }
+}
+// 收藏文章
+exports.undoCollections = async (req, res, next) => {
   try {
     // 处理请求
     res.send('post 请求 收藏文章  必传id')
